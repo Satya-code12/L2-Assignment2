@@ -1,0 +1,173 @@
+:root {
+ --bg-gradient: linear-gradient(to right, #F24F4F, #FFA895);
+}
+
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: Arial, sans-serif;
+ overflow: hidden;
+}
+
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+.container {
+ background: var(--bg-gradient);
+ min-height: 100vh;
+ transition: background 0.5s ease;
+ padding: 0 5%;
+}
+
+/* Navigation */
+nav {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 20px 0;
+}
+
+.logo img {
+ height: 30px;
+}
+
+.menu {
+ display: flex;
+ gap: 30px;
+}
+
+.menu a {
+ text-decoration: none;
+ color: #333;
+}
+
+.signup-btn {
+ background: #000;
+ color: white;
+ border: none;
+ border-radius: 20px;
+ padding: 10px 20px;
+ cursor: pointer;
+}
+
+/* Content Layout */
+.content {
+ display: flex;
+ min-height: calc(100vh - 80px);
+ position: relative;
+}
+
+.title {
+ font-family: 'Sofia Sans', sans-serif;
+}
+
+.text-content {
+ width: 50%;
+ padding-top: 10%;
+}
+
+h1 {
+ font-size: 2.5rem;
+ color: white;
+ margin-bottom: 10px;
+}
+
+.h2-div {
+ display: flex;
+ gap: .25rem;
+}
+
+.h2-div > .subtitle-2 {
+ color: #1C1415;
+}
+
+h2 {
+ font-size: 1.5rem;
+ color: rgba(255, 255, 255, 0.8);
+ margin-bottom: 20px;
+}
+
+p {
+ color: rgba(255, 255, 255, 0.8);
+ margin-bottom: 30px;
+ max-width: 80%;
+ line-height: 1.6;
+}
+
+.description {
+ font-family: 'Poppins', sans-serif;
+}
+
+.price {
+ font-size: 2rem;
+ font-weight: bold;
+ color: white;
+}
+
+/* Watch Slider */
+.watch-slider {
+ width: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.splide {
+ width: 100%;
+}
+
+.splide__slide img {
+ max-width: 80%;
+ display: block;
+ margin: 0 auto;
+ filter: drop-shadow(0 10px 20px rgba(0,0,0,0.15));
+}
+
+/* Social Icons */
+.social-icons {
+ position: absolute;
+ bottom: 40px;
+ left: 0;
+ display: flex;
+ gap: 15px;
+}
+
+.social-icons a {
+ width: 36px;
+ height: 36px;
+ border-radius: 50%;
+ background: rgba(255, 255, 255, 0.2);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+/* Splide Custom Arrows */
+.splide__arrow {
+ background: rgba(255, 255, 255, 0.3);
+ border-radius: 50%;
+ width: 40px;
+ height: 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+ .content {
+   flex-direction: column;
+ }
+ 
+ .text-content, .watch-slider {
+   width: 100%;
+ }
+ 
+ .menu {
+   display: none;
+ }
+ 
+ .social-icons {
+   position: relative;
+   margin-top: 30px;
+ }
+}
